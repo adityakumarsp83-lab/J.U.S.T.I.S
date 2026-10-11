@@ -1,0 +1,22 @@
+# ─── Compiled Java class files ─────────────────────
+out/
+*.class
+
+# ─── IDE & Editor files ───────────────────────────
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ─── Runtime generated files ──────────────────────
+data/audit_log.csv
+data/checkpoint.dat
+
+# ─── OS files ─────────────────────────────────────
+Thumbs.db

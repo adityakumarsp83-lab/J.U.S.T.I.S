@@ -1,0 +1,11 @@
+case_id,case_type,title,filing_year,case_age_days,custody_days,urgency_flag,statute_code,dispute_value_inr,cited_case_ids
+101,CRIMINAL,State of MH v. Rahul Sharma,2021,1250,450,5,BNS_103,0.0,NONE
+102,CRIMINAL,State of KA v. Suresh Kumar,2023,400,210,4,BNSS_479,0.0,101
+103,CIVIL,Mehta Constructions v. City Corp,2018,2100,0,1,BNS_316,12500000.0,NONE
+104,CRIMINAL,State of UP v. Vikas Yadav,2024,120,90,5,BNS_111,0.0,101|102
+105,CIVIL,Gupta Brothers Property Partition,2019,1800,0,2,BNS_303,4500000.0,103
+106,CRIMINAL,State of DL v. Ankit Patel,2022,750,380,4,BNSS_479,0.0,102
+107,CIVIL,Apex Traders v. Logistics Ltd,2023,310,0,2,BNS_318,850000.0,NONE
+108,WRIT,Rao v. Union of India (Habeas Corpus),2024,15,10,5,CONST_226,0.0,NONE
+109,CRIMINAL,State of MP v. Ramesh Singh,2020,1450,600,5,BNS_103,0.0,101|104
+110,CIVIL,Kulkarni Estate Dispute,2017,2550,0,1,BNS_303,98000000.0,103|105
