@@ -106,7 +106,7 @@ J.U.S.T.I.S./
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/J.U.S.T.I.S..git
+git clone https://github.com/adityakumarsp83-lab/J.U.S.T.I.S.git
 cd J.U.S.T.I.S.
 
 # Compile all sources
