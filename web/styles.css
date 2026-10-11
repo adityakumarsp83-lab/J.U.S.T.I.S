@@ -1180,3 +1180,129 @@ input[type="range"]::-webkit-slider-thumb {
     transform: translateY(0);
     opacity: 1;
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   NATIONAL EMBLEM & LADY JUSTICE BACKDROPS & WATERMARKS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Global National Emblem Watermark */
+.national-emblem-watermark {
+    position: fixed;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    width: 620px;
+    height: 620px;
+    background: url('assets/national_emblem.jpg') center/contain no-repeat;
+    opacity: 0.055;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.4));
+}
+
+/* Sidebar Sculpted Gold Emblem */
+.national-seal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Tab 1: Lady Justice (Nyayadevata) Priority Backdrop */
+.lady-justice-backdrop {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-radius: var(--radius-lg);
+    background: url('assets/lady_justice_bg.jpg') center 28% / cover no-repeat;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(212, 175, 55, 0.12) inset;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px 30px;
+}
+
+.lady-justice-backdrop::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, 
+        rgba(11, 23, 35, 0.95) 0%, 
+        rgba(11, 23, 35, 0.8) 42%, 
+        rgba(11, 23, 35, 0.25) 80%,
+        rgba(11, 23, 35, 0.7) 100%),
+        linear-gradient(0deg, rgba(11, 23, 35, 0.9) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.backdrop-caption {
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+}
+
+.caption-tag {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.caption-tag::before {
+    content: '⚖️';
+    font-size: 14px;
+}
+
+.caption-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+    letter-spacing: 0.5px;
+}
+
+/* Subtle Tab 3 Undertrial Watermark */
+#tab-undertrial {
+    position: relative;
+}
+#tab-undertrial::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 380px;
+    height: 380px;
+    background: url('assets/national_emblem.jpg') center/contain no-repeat;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: screen;
+}
+
+/* Subtle Tab 5 Analytics Watermark */
+#tab-analytics::before {
+    content: '';
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 440px;
+    height: 440px;
+    background: url('assets/national_emblem.jpg') center/contain no-repeat;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: screen;
+}

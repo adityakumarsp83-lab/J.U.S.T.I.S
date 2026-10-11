@@ -407,6 +407,7 @@ public class WebServer {
         if (filename.endsWith(".js")) return "application/javascript; charset=UTF-8";
         if (filename.endsWith(".json")) return "application/json; charset=UTF-8";
         if (filename.endsWith(".png")) return "image/png";
+        if (filename.endsWith(".jpg") || filename.endsWith(".jpeg")) return "image/jpeg";
         if (filename.endsWith(".svg")) return "image/svg+xml";
         return "application/octet-stream";
     }
