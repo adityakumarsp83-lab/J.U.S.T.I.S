@@ -3,86 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J.U.S.T.I.S. — Judicial Unified Search, Triaging & Intelligent Scheduling</title>
-    <meta name="description" content="Algorithmic legal-technology platform for automated court cause-list generation, precedent DAG overrule detection, and BNSS 479 compliance.">
-    <!-- Google Fonts -->
+    <title>J.U.S.T.I.S. — Supreme Court of India Triaging & Intelligent Scheduling</title>
+    <meta name="description" content="Official Institutional Legal-Tech Platform for Supreme Court Cause List Triaging, Precedent DAG Health & BNSS 479 Compliance.">
+    <!-- Google Fonts: Cinzel (Prestigious Judiciary), Plus Jakarta Sans (Modern Executive), JetBrains Mono (Codes) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Background Ambient Glows -->
-    <div class="ambient-glow glow-1"></div>
-    <div class="ambient-glow glow-2"></div>
-    <div class="ambient-glow glow-3"></div>
+    <!-- Indian Tricolour National Accent Bar -->
+    <div class="national-accent-bar">
+        <div class="stripe saffron"></div>
+        <div class="stripe white"></div>
+        <div class="stripe green"></div>
+    </div>
+
+    <!-- Architectural Ambient Glows -->
+    <div class="court-ambient-glow glow-dome"></div>
+    <div class="court-ambient-glow glow-brass"></div>
 
     <div class="app-layout">
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="brand-section">
-                <div class="logo-mark">
-                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                        <polyline points="2 17 12 22 22 17"></polyline>
-                        <polyline points="2 12 12 17 22 12"></polyline>
+                <div class="emblem-wrapper">
+                    <!-- Supreme Court Scales of Justice SVG -->
+                    <svg viewBox="0 0 100 100" class="scales-emblem">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3,3" opacity="0.6"/>
+                        <circle cx="50" cy="50" r="41" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <!-- Center Pillar & Beam -->
+                        <line x1="50" y1="18" x2="50" y2="80" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                        <circle cx="50" cy="18" r="4.5" fill="currentColor"/>
+                        <path d="M22 28 L50 24 L78 28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Left Pan -->
+                        <line x1="22" y1="28" x2="14" y2="46" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="22" y1="28" x2="30" y2="46" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M12 46 Q22 56 32 46 Z" fill="currentColor" opacity="0.8"/>
+                        <!-- Right Pan -->
+                        <line x1="78" y1="28" x2="70" y2="46" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="78" y1="28" x2="86" y2="46" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M68 46 Q78 56 88 46 Z" fill="currentColor" opacity="0.8"/>
+                        <!-- Pedestal Base -->
+                        <path d="M36 80 L64 80 L60 86 L40 86 Z" fill="currentColor"/>
                     </svg>
                 </div>
                 <div class="brand-text">
+                    <div class="republic-tag">SUPREME COURT OF INDIA</div>
                     <h1 class="brand-title">J.U.S.T.I.S.</h1>
-                    <span class="brand-subtitle">Judicial Triaging & Scheduling</span>
+                    <div class="motto-tag">यतो धर्मस्ततो जयः</div>
                 </div>
             </div>
 
             <div class="system-status-badge">
                 <span class="status-pulse"></span>
-                <span class="status-label">JVM Core Connected</span>
+                <span class="status-label">ROSTER DISPATCH ONLINE</span>
             </div>
 
             <nav class="nav-menu">
                 <button class="nav-item active" data-tab="causelist" id="nav-causelist">
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                     <span>Cause List Triager</span>
-                    <span class="badge badge-accent">60/30/10</span>
+                    <span class="badge badge-brass">60/30/10</span>
                 </button>
 
                 <button class="nav-item" data-tab="dag" id="nav-dag">
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                     <span>Citation DAG Graph</span>
-                    <span class="badge badge-warning" id="overruled-count-badge">Overrule DFS</span>
+                    <span class="badge badge-crimson" id="overruled-count-badge">Overrule DFS</span>
                 </button>
 
                 <button class="nav-item" data-tab="undertrial" id="nav-undertrial">
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                     <span>BNSS 479 Release</span>
-                    <span class="badge badge-success" id="eligible-badge">Sec 479</span>
+                    <span class="badge badge-emerald" id="eligible-badge">Sec 479</span>
                 </button>
 
                 <button class="nav-item" data-tab="search" id="nav-search">
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <span>Search & Autocomplete</span>
-                    <span class="badge badge-info">Trie + Hash</span>
+                    <span>Search & Statutes</span>
+                    <span class="badge badge-chakra">Trie + Hash</span>
                 </button>
 
                 <button class="nav-item" data-tab="analytics" id="nav-analytics">
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                     <span>Court Analytics</span>
-                    <span class="badge badge-purple">Quickselect</span>
+                    <span class="badge badge-brass">Quickselect</span>
                 </button>
 
                 <button class="nav-item" data-tab="docket" id="nav-docket">
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                     <span>Master Docket</span>
-                    <span class="badge badge-neutral" id="total-docket-badge">10 Cases</span>
+                    <span class="badge badge-muted" id="total-docket-badge">10 Cases</span>
                 </button>
             </nav>
 
             <div class="sidebar-footer">
-                <div class="user-meta">
-                    <div class="user-avatar">SC</div>
-                    <div class="user-info">
-                        <div class="user-name">Supreme Court Bench</div>
-                        <div class="user-court">National Judicial Roster</div>
+                <div class="bench-card">
+                    <div class="court-seal-ring">🏛️</div>
+                    <div class="bench-meta">
+                        <div class="bench-title">Chief Justice's Bench</div>
+                        <div class="bench-jurisdiction">Apex Court of India • Tilak Marg</div>
                     </div>
                 </div>
             </div>
@@ -90,20 +111,25 @@
 
         <!-- Main Content Area -->
         <main class="main-content">
-            <!-- Top Header Bar -->
+            <!-- Top Institutional Header -->
             <header class="top-header">
                 <div class="header-left">
-                    <h2 class="view-title" id="page-title">Daily Cause List Generator</h2>
+                    <div class="header-breadcrumb">
+                        <span class="court-institution">SUPREME COURT OF INDIA</span>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">DAILY CAUSE LIST ROSTER</span>
+                    </div>
+                    <h2 class="view-title" id="page-title">Cause List Triaging Engine</h2>
                     <p class="view-description" id="page-subtitle">Algorithmic triaging dispatching 60% Urgent (Max-Heap), 30% Backlog (FIFO), 10% Fresh Admissions</p>
                 </div>
                 <div class="header-actions">
                     <button class="btn btn-secondary" id="btn-refresh" title="Reload from Java Backend">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
-                        Refresh Data
+                        <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                        Refresh Docket
                     </button>
                     <button class="btn btn-primary" id="btn-export-docket">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Export Cause List
+                        <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Print Daily Cause List
                     </button>
                 </div>
             </header>
@@ -111,10 +137,10 @@
             <!-- TAB 1: CAUSE LIST TRIAGER -->
             <section class="tab-pane active" id="tab-causelist">
                 <!-- Controls & Stats Bar -->
-                <div class="control-panel glass-panel">
+                <div class="court-panel control-panel">
                     <div class="slider-control">
                         <div class="slider-label-group">
-                            <label for="slot-slider">Docket Capacity Slots:</label>
+                            <label for="slot-slider">Cause List Bench Capacity:</label>
                             <span class="slot-display" id="slot-value">10 Slots</span>
                         </div>
                         <input type="range" id="slot-slider" min="3" max="15" value="10" step="1">
@@ -127,21 +153,24 @@
                             <div class="dist-segment dist-tier3" id="bar-tier3" style="width: 10%;" title="Tier 3 Fresh Admissions (10%)"></div>
                         </div>
                         <div class="dist-legend">
-                            <span><span class="dot dot-tier1"></span> Tier 1: Urgent Heap (60%)</span>
-                            <span><span class="dot dot-tier2"></span> Tier 2: Backlog FIFO (30%)</span>
-                            <span><span class="dot dot-tier3"></span> Tier 3: Fresh (10%)</span>
+                            <span><span class="dot dot-tier1"></span> Tier 1: Urgent Matters (60%)</span>
+                            <span><span class="dot dot-tier2"></span> Tier 2: Regular Backlog (30%)</span>
+                            <span><span class="dot dot-tier3"></span> Tier 3: Fresh Admissions (10%)</span>
                         </div>
                     </div>
 
-                    <button class="btn btn-glow" id="btn-generate-list">
+                    <button class="btn btn-gold" id="btn-generate-list">
                         Generate Cause List
                     </button>
                 </div>
 
                 <!-- Cause List Table -->
-                <div class="glass-panel table-card">
+                <div class="court-panel table-card">
                     <div class="card-header">
-                        <h3 class="card-title">Scheduled Court Cause List (Roster for Today)</h3>
+                        <div>
+                            <h3 class="card-title">Supreme Court Daily Cause List</h3>
+                            <span class="card-subhead">Certified Roster for Hearing Before the Hon'ble Benches</span>
+                        </div>
                         <span class="audit-indicator">Audit logged to data/audit_log.csv</span>
                     </div>
 
@@ -149,15 +178,15 @@
                         <table class="data-table" id="causelist-table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Case ID</th>
-                                    <th>Type</th>
-                                    <th>Case Title</th>
+                                    <th>Item #</th>
+                                    <th>Diary / ID</th>
+                                    <th>Classification</th>
+                                    <th>Cause Title / Litigants</th>
                                     <th>Statute</th>
-                                    <th>Age / Custody</th>
+                                    <th>Pendency / Custody</th>
                                     <th>Priority Score</th>
-                                    <th>Scheduling Tier</th>
-                                    <th>Audit Reasoning</th>
+                                    <th>Docket Tier</th>
+                                    <th>Triaging Reason</th>
                                 </tr>
                             </thead>
                             <tbody id="causelist-tbody">
@@ -170,10 +199,10 @@
 
             <!-- TAB 2: CITATION DAG NETWORK -->
             <section class="tab-pane" id="tab-dag">
-                <div class="glass-panel dag-header-panel">
+                <div class="court-panel dag-header-panel">
                     <div>
-                        <h3 class="card-title">Interactive Precedent Citation DAG</h3>
-                        <p class="card-subtitle">Visualizes legal authority citations, detects cycles, and flags overruled precedents via DFS traversal</p>
+                        <h3 class="card-title">Precedent Citation DAG & Overrule Tracker</h3>
+                        <p class="card-subhead">Detects overruled authorities and cycles across Supreme Court & High Court judgments via DFS</p>
                     </div>
                     <div class="dag-legend-badges">
                         <span class="badge-legend badge-cites"><span class="indicator-cites"></span> CITES (Persuasive)</span>
@@ -183,14 +212,14 @@
                 </div>
 
                 <div class="dag-workspace">
-                    <div class="canvas-container glass-panel">
+                    <div class="canvas-container court-panel">
                         <canvas id="dag-canvas" width="850" height="520"></canvas>
-                        <div class="canvas-instructions">Click on any case node to trace its complete precedent lineage & check overrule warnings</div>
+                        <div class="canvas-instructions">Click any case node to inspect precedent validity, incoming authority citations & DFS overrule traces</div>
                     </div>
 
-                    <div class="dag-sidebar glass-panel" id="dag-inspector">
-                        <h4 class="inspector-title">Citation Inspector</h4>
-                        <p class="inspector-empty" id="inspector-placeholder">Select a case node from the graph to inspect citation health, incoming authority links, and overrule warnings.</p>
+                    <div class="dag-sidebar court-panel" id="dag-inspector">
+                        <h4 class="inspector-title">Precedent Health Inspector</h4>
+                        <p class="inspector-empty" id="inspector-placeholder">Select a case node from the graph to inspect judicial authority, direct precedents, and overrule warning chains.</p>
                         <div id="inspector-content" style="display: none;">
                             <!-- Filled dynamically -->
                         </div>
@@ -201,32 +230,35 @@
             <!-- TAB 3: BNSS 479 COMPLIANCE -->
             <section class="tab-pane" id="tab-undertrial">
                 <div class="undertrial-kpi-grid">
-                    <div class="glass-panel kpi-card">
+                    <div class="court-panel kpi-card">
                         <div class="kpi-icon icon-eligible">🔓</div>
                         <div class="kpi-data">
                             <span class="kpi-value" id="kpi-eligible-count">0</span>
                             <span class="kpi-label">Eligible for Mandatory Release</span>
                         </div>
                     </div>
-                    <div class="glass-panel kpi-card">
+                    <div class="court-panel kpi-card">
                         <div class="kpi-icon icon-detained">⚖️</div>
                         <div class="kpi-data">
                             <span class="kpi-value" id="kpi-detained-count">0</span>
-                            <span class="kpi-label">Active Undertrial Detainees</span>
+                            <span class="kpi-label">Undertrial Inmates in Custody</span>
                         </div>
                     </div>
-                    <div class="glass-panel kpi-card">
+                    <div class="court-panel kpi-card">
                         <div class="kpi-icon icon-rule">📜</div>
                         <div class="kpi-data">
                             <span class="kpi-value">50% Max</span>
-                            <span class="kpi-label">Statutory Ceiling (Sec 479)</span>
+                            <span class="kpi-label">BNSS § 479 Statutory Ceiling</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass-panel table-card">
+                <div class="court-panel table-card">
                     <div class="card-header">
-                        <h3 class="card-title">Section 479 BNSS Undertrial Release Tracker</h3>
+                        <div>
+                            <h3 class="card-title">Section 479 BNSS Undertrial Release Tracker</h3>
+                            <span class="card-subhead">Bharatiya Nagarik Suraksha Sanhita, 2023 — Maximum Detention Period Oversight</span>
+                        </div>
                         <div class="filter-pills">
                             <button class="pill active" data-filter="all">All Matters</button>
                             <button class="pill" data-filter="eligible">Eligible for Release</button>
@@ -238,14 +270,14 @@
                             <thead>
                                 <tr>
                                     <th>Case ID</th>
-                                    <th>Title</th>
-                                    <th>Offence Statute</th>
-                                    <th>Max Sentence</th>
+                                    <th>Matter Title</th>
+                                    <th>Charged Statute</th>
+                                    <th>Statutory Max</th>
                                     <th>Detention Progress</th>
-                                    <th>Custody Days</th>
-                                    <th>Threshold (50%)</th>
-                                    <th>Compliance Status</th>
-                                    <th>Action</th>
+                                    <th>Custody Served</th>
+                                    <th>Release Threshold (50%)</th>
+                                    <th>Statutory Compliance</th>
+                                    <th>Judicial Order</th>
                                 </tr>
                             </thead>
                             <tbody id="undertrial-tbody">
@@ -258,9 +290,9 @@
 
             <!-- TAB 4: UNIFIED SEARCH & AUTOCOMPLETE -->
             <section class="tab-pane" id="tab-search">
-                <div class="glass-panel search-hero-card">
-                    <h3 class="search-hero-title">Algorithmic Legal Search Engine</h3>
-                    <p class="search-hero-subtitle">Conjunctive keyword retrieval (Separate Chaining Hash Table) & Statutory Prefix Tree (Trie O(K))</p>
+                <div class="court-panel search-hero-card">
+                    <h3 class="search-hero-title">Apex Judicial Search & Statute Catalog</h3>
+                    <p class="search-hero-subtitle">Conjunctive keyword retrieval (Separate-Chaining Inverted Index) & Statutory Code Autocomplete (Trie O(K))</p>
 
                     <div class="search-inputs-row">
                         <!-- Keyword Search -->
@@ -268,16 +300,16 @@
                             <label>Inverted Index Keyword Search:</label>
                             <div class="search-bar-wrap">
                                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                                <input type="text" id="keyword-input" placeholder="Search keywords (e.g., 'State', 'Bail', 'Vikas', 'Dispute')..." autocomplete="off">
+                                <input type="text" id="keyword-input" placeholder="Search docket terms (e.g., 'State', 'Bail', 'Vikas', 'Sharma')..." autocomplete="off">
                             </div>
                         </div>
 
                         <!-- Trie Autocomplete -->
                         <div class="input-group search-flex-1 autocomplete-container">
-                            <label>Statutory Provision Autocomplete (Trie):</label>
+                            <label>Statutory Code Prefix Autocomplete (Trie):</label>
                             <div class="search-bar-wrap">
                                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                                <input type="text" id="statute-input" placeholder="Type statute prefix: BNS, BNSS, CONST..." autocomplete="off">
+                                <input type="text" id="statute-input" placeholder="Enter prefix: BNS, BNSS, CONST, CPC..." autocomplete="off">
                             </div>
                             <div class="autocomplete-dropdown" id="statute-dropdown"></div>
                         </div>
@@ -285,23 +317,23 @@
                 </div>
 
                 <!-- Search Results -->
-                <div class="glass-panel table-card">
+                <div class="court-panel table-card">
                     <div class="card-header">
                         <h3 class="card-title" id="search-results-heading">Matching Docket Records</h3>
-                        <span class="badge badge-accent" id="search-match-count">0 Results</span>
+                        <span class="badge badge-brass" id="search-match-count">0 Results</span>
                     </div>
                     <div class="table-container">
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th>Case ID</th>
-                                    <th>Type</th>
+                                    <th>Diary #</th>
+                                    <th>Classification</th>
                                     <th>Title</th>
                                     <th>Statute</th>
                                     <th>Filing Year</th>
                                     <th>Age</th>
-                                    <th>Score</th>
-                                    <th>Status</th>
+                                    <th>Priority</th>
+                                    <th>Lifecycle Status</th>
                                 </tr>
                             </thead>
                             <tbody id="search-tbody">
@@ -315,25 +347,25 @@
             <!-- TAB 5: COURT ANALYTICS DASHBOARD -->
             <section class="tab-pane" id="tab-analytics">
                 <div class="analytics-hero-grid">
-                    <div class="glass-panel metric-card">
+                    <div class="court-panel metric-card">
                         <span class="metric-label">Median Case Age (Hoare's Quickselect)</span>
                         <div class="metric-number"><span id="metric-median">0</span> <span class="metric-unit">days</span></div>
                         <span class="metric-subtext">Computed in expected O(N) linear time</span>
                     </div>
 
-                    <div class="glass-panel metric-card">
+                    <div class="court-panel metric-card">
                         <span class="metric-label">Mean Pendency Age</span>
                         <div class="metric-number"><span id="metric-mean">0</span> <span class="metric-unit">days</span></div>
                         <span class="metric-subtext">Std Dev: <span id="metric-stddev">0</span> days</span>
                     </div>
 
-                    <div class="glass-panel metric-card highlight-starving">
+                    <div class="court-panel metric-card highlight-starving">
                         <span class="metric-label">Starving Cases (>1000 Days)</span>
                         <div class="metric-number" id="metric-starving">0</div>
                         <span class="metric-subtext">Circuit-breaker priority escalated</span>
                     </div>
 
-                    <div class="glass-panel metric-card">
+                    <div class="court-panel metric-card">
                         <span class="metric-label">Total Docket Inventory</span>
                         <div class="metric-number" id="metric-total">10</div>
                         <span class="metric-subtext">Zero unindexed records</span>
@@ -341,14 +373,14 @@
                 </div>
 
                 <div class="analytics-charts-grid">
-                    <div class="glass-panel chart-box">
+                    <div class="court-panel chart-box">
                         <h4 class="chart-title">Docket Distribution by Matter Classification</h4>
                         <div class="type-bars-list" id="type-distribution-container">
                             <!-- Populated dynamically -->
                         </div>
                     </div>
 
-                    <div class="glass-panel chart-box">
+                    <div class="court-panel chart-box">
                         <h4 class="chart-title">Urgency Matrix (1 = Routine to 5 = Constitutional)</h4>
                         <div class="urgency-histogram" id="urgency-container">
                             <!-- Populated dynamically -->
@@ -359,9 +391,12 @@
 
             <!-- TAB 6: MASTER DOCKET EXPLORER -->
             <section class="tab-pane" id="tab-docket">
-                <div class="glass-panel docket-grid-header">
-                    <h3 class="card-title">Supreme Court Master Docket Repository</h3>
-                    <input type="text" id="docket-filter-input" placeholder="Filter cases by title, ID, or statute..." class="table-filter-input">
+                <div class="court-panel docket-grid-header">
+                    <div>
+                        <h3 class="card-title">Supreme Court Master Docket Repository</h3>
+                        <span class="card-subhead">Complete index of all pending civil, criminal and writ matters</span>
+                    </div>
+                    <input type="text" id="docket-filter-input" placeholder="Search by title, ID, or statute..." class="table-filter-input">
                 </div>
                 <div class="cases-card-grid" id="docket-cards-container">
                     <!-- Populated dynamically -->
@@ -372,16 +407,19 @@
 
     <!-- Case Details Modal -->
     <div class="modal-backdrop" id="case-modal">
-        <div class="modal-dialog glass-panel">
+        <div class="modal-dialog court-panel">
             <div class="modal-header">
-                <h3 class="modal-title" id="modal-title">Case Details</h3>
+                <div>
+                    <span class="modal-court-tag">SUPREME COURT OF INDIA • CASE RECORD</span>
+                    <h3 class="modal-title" id="modal-title">Case Details</h3>
+                </div>
                 <button class="modal-close" id="modal-close-btn">&times;</button>
             </div>
             <div class="modal-body" id="modal-body">
                 <!-- Filled dynamically -->
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" id="modal-dismiss-btn">Close</button>
+                <button class="btn btn-secondary" id="modal-dismiss-btn">Dismiss</button>
             </div>
         </div>
     </div>

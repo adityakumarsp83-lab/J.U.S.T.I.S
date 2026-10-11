@@ -198,9 +198,9 @@ function renderCauseListTable(items) {
 }
 
 function getTypeBadge(type) {
-    if (type === 'CRIMINAL') return 'badge-warning';
-    if (type === 'CIVIL') return 'badge-accent';
-    return 'badge-purple';
+    if (type === 'CRIMINAL') return 'badge-crimson';
+    if (type === 'CIVIL') return 'badge-chakra';
+    return 'badge-brass';
 }
 
 // ─── Citation DAG Graph (Canvas) ──────────────────────────────────
@@ -257,15 +257,15 @@ function renderDagCanvas() {
         ctx.arc(pos.x, pos.y, 22, 0, 2 * Math.PI);
 
         if (isOverruled) {
-            ctx.fillStyle = '#7f1d1d';
-            ctx.strokeStyle = '#f43f5e';
-            ctx.shadowColor = '#f43f5e';
-            ctx.shadowBlur = 15;
+            ctx.fillStyle = '#5c1d14';
+            ctx.strokeStyle = '#b84a39';
+            ctx.shadowColor = '#b84a39';
+            ctx.shadowBlur = 16;
         } else {
-            ctx.fillStyle = '#0f172a';
-            ctx.strokeStyle = '#0ea5e9';
-            ctx.shadowColor = '#0ea5e9';
-            ctx.shadowBlur = 8;
+            ctx.fillStyle = '#10222f';
+            ctx.strokeStyle = '#d4af37';
+            ctx.shadowColor = '#d4af37';
+            ctx.shadowBlur = 10;
         }
 
         ctx.lineWidth = 2.5;
@@ -314,15 +314,15 @@ function drawArrow(ctx, fromX, fromY, toX, toY, relation) {
     ctx.lineTo(targetX, targetY);
 
     if (relation === 'OVERRULES') {
-        ctx.strokeStyle = '#f43f5e';
+        ctx.strokeStyle = '#b84a39';
         ctx.lineWidth = 2.5;
         ctx.setLineDash([6, 4]);
     } else if (relation === 'RELIES_ON') {
-        ctx.strokeStyle = '#a855f7';
+        ctx.strokeStyle = '#d4af37';
         ctx.lineWidth = 2;
         ctx.setLineDash([]);
     } else {
-        ctx.strokeStyle = '#38bdf8';
+        ctx.strokeStyle = '#60a5fa';
         ctx.lineWidth = 1.5;
         ctx.setLineDash([]);
     }
@@ -557,9 +557,9 @@ function renderAnalyticsCharts(stats) {
     typeContainer.innerHTML = '';
 
     const types = [
-        { label: 'Criminal Matters', count: stats.criminalCount, color: 'var(--rose-primary)' },
-        { label: 'Civil Disputes', count: stats.civilCount, color: 'var(--cyan-primary)' },
-        { label: 'Constitutional Writs', count: stats.writCount, color: 'var(--purple-primary)' }
+        { label: 'Criminal Trials & Bail', count: stats.criminalCount, color: 'var(--sandstone-red)' },
+        { label: 'Civil & Commercial Disputes', count: stats.civilCount, color: 'var(--chakra-blue)' },
+        { label: 'Constitutional Writs (Art. 226/32)', count: stats.writCount, color: 'var(--gold-primary)' }
     ];
 
     types.forEach(t => {
@@ -582,11 +582,11 @@ function renderAnalyticsCharts(stats) {
     const urgencyContainer = document.getElementById('urgency-container');
     urgencyContainer.innerHTML = '';
     const urgencyCounts = [
-        { lvl: 5, label: 'Level 5 (Emergency/Bail)', count: 4, color: '#f43f5e' },
-        { lvl: 4, label: 'Level 4 (Custodial Expedited)', count: 2, color: '#f59e0b' },
-        { lvl: 3, label: 'Level 3 (Standard Contested)', count: 0, color: '#eab308' },
-        { lvl: 2, label: 'Level 2 (Routine Commercial)', count: 2, color: '#0ea5e9' },
-        { lvl: 1, label: 'Level 1 (Regular Backlog)', count: 2, color: '#64748b' }
+        { lvl: 5, label: 'Level 5 (Emergency Bail & Habeas Corpus)', count: 4, color: '#b84a39' },
+        { lvl: 4, label: 'Level 4 (Urgent Custodial & Public Interest)', count: 2, color: '#f97316' },
+        { lvl: 3, label: 'Level 3 (Standard Contested Litigation)', count: 0, color: '#d4af37' },
+        { lvl: 2, label: 'Level 2 (Commercial Regular Docket)', count: 2, color: '#2563eb' },
+        { lvl: 1, label: 'Level 1 (Routine Chamber Matters)', count: 2, color: '#64748b' }
     ];
 
     urgencyCounts.forEach(u => {
@@ -690,7 +690,7 @@ function closeModal() {
 function showToast(msg, isError = false) {
     const toast = document.getElementById('toast');
     toast.textContent = msg;
-    toast.style.borderColor = isError ? 'var(--rose-primary)' : 'var(--cyan-primary)';
+    toast.style.borderColor = isError ? 'var(--sandstone-red)' : 'var(--gold-primary)';
     toast.classList.add('show');
     setTimeout(() => {
         toast.classList.remove('show');
