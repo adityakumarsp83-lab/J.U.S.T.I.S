@@ -13,7 +13,7 @@ OUT_DIR="$PROJECT_DIR/out"
 echo ""
 echo "╔══════════════════════════════════════════════════╗"
 echo "║     J.U.S.T.I.S. — Build System                 ║"
-echo "╚══════════════════════════════════════════════════╝"
+╚══════════════════════════════════════════════════╝"
 echo ""
 
 # ─── Clean ─────────────────────────────────────────
@@ -42,7 +42,14 @@ else
 fi
 
 # ─── Run ───────────────────────────────────────────
-if [ "$1" = "test" ]; then
+if [ "$1" = "web" ]; then
+    echo ""
+    echo "🌐 Launching J.U.S.T.I.S. Web Application at http://localhost:8080..."
+    echo "─────────────────────────────────────────────────"
+    cd "$PROJECT_DIR"
+    (sleep 1 && open "http://localhost:8080" 2>/dev/null || true) &
+    java -cp "$OUT_DIR" com.justis.web.WebServer
+elif [ "$1" = "test" ]; then
     echo ""
     echo "🧪 Running Comprehensive Test Suite..."
     echo "─────────────────────────────────────────────────"
