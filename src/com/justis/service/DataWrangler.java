@@ -35,7 +35,8 @@ public class DataWrangler {
     /**
      * Immutable record representing a row from the statutes catalog CSV.
      */
-    public static class StatuteRecord {
+    public static class StatuteRecord implements java.io.Serializable {
+        private static final long serialVersionUID = 1L;
         private final String statuteCode;
         private final String actName;
         private final String description;

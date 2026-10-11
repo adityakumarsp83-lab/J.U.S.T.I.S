@@ -131,7 +131,9 @@ javac -d out src/com/justis/exception/*.java \
              src/com/justis/service/*.java
 
 # Run smoke test
-java -cp out com.justis.Phase2SmokeTest
+./compile.sh test    # Run 38/38 Comprehensive Tests
+./compile.sh demo    # Run Automated Verification Demo
+./compile.sh run     # Launch Interactive Terminal Application
 ```
 
 ## 📊 Dataset
@@ -151,10 +153,10 @@ Built on the **ILDC (Indian Legal Documents Corpus)** benchmark:
 
 - [x] **Phase 1:** Research & Modeling
 - [x] **Phase 2:** Domain Model & Ingestion Pipeline
-- [ ] **Phase 3:** Custom Data Structures (MaxHeap, DAG, Trie, InvertedIndex)
-- [ ] **Phase 4:** Analytics Engine & Scheduler Facade
-- [ ] **Phase 5:** Interactive CLI Application
-- [ ] **Phase 6:** Testing & Documentation
+- [x] **Phase 3:** Custom Data Structures (MaxHeap, CitationGraph DAG, Trie, InvertedIndex)
+- [x] **Phase 4:** Analytics Engine & Scheduler Facade (Quickselect, BNSS Sec 479, CheckpointManager)
+- [x] **Phase 5:** Interactive CLI Application ( with 9 interactive options)
+- [x] **Phase 6:** Testing & Documentation (Comprehensive Test Suite: 38/38 passing)
 
 ## 🧮 Priority Scoring Formulas
 

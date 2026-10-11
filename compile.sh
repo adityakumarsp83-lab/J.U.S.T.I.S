@@ -28,7 +28,6 @@ fi
 echo "🔨 Compiling Java sources..."
 mkdir -p "$OUT_DIR"
 
-# Find all .java files
 JAVA_FILES=$(find "$SRC_DIR" -name "*.java")
 FILE_COUNT=$(echo "$JAVA_FILES" | wc -l | tr -d ' ')
 echo "   Found $FILE_COUNT source files."
@@ -45,16 +44,28 @@ fi
 # ─── Run ───────────────────────────────────────────
 if [ "$1" = "test" ]; then
     echo ""
+    echo "🧪 Running Comprehensive Test Suite..."
+    echo "─────────────────────────────────────────────────"
+    cd "$PROJECT_DIR"
+    java -cp "$OUT_DIR" com.justis.ComprehensiveTestSuite
+elif [ "$1" = "test-phase2" ]; then
+    echo ""
     echo "🧪 Running Phase 2 Smoke Test..."
     echo "─────────────────────────────────────────────────"
     cd "$PROJECT_DIR"
     java -cp "$OUT_DIR" com.justis.Phase2SmokeTest
-elif [ "$1" = "run" ] || [ -z "$1" ]; then
+elif [ "$1" = "demo" ]; then
     echo ""
-    echo "🚀 Running J.U.S.T.I.S...."
+    echo "🚀 Running J.U.S.T.I.S. Automated Verification Demo..."
     echo "─────────────────────────────────────────────────"
     cd "$PROJECT_DIR"
-    java -cp "$OUT_DIR" com.justis.Main 2>/dev/null || echo "   ℹ️  Main.java not yet implemented. Use './compile.sh test' to run tests."
+    java -cp "$OUT_DIR" com.justis.Main --demo
+elif [ "$1" = "run" ] || [ -z "$1" ]; then
+    echo ""
+    echo "🚀 Launching J.U.S.T.I.S. Interactive Terminal..."
+    echo "─────────────────────────────────────────────────"
+    cd "$PROJECT_DIR"
+    java -cp "$OUT_DIR" com.justis.Main
 fi
 
 echo ""

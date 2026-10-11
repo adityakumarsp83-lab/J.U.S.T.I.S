@@ -18,7 +18,8 @@ package com.justis.model;
  *
  * @author J.U.S.T.I.S. Team
  */
-public class CitationEdge {
+public class CitationEdge implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
 
     /**
      * Enum representing the legal relationship type between two cases.
